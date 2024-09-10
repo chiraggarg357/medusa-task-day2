@@ -58,6 +58,8 @@ Medusa will prompt you to set up a PostgreSQL database with credentials.
 After the database setup is complete, you can navigate to your project directory and start the development server
 
 cd my-medusa-store
+
+
 medusa develop
 
 
