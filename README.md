@@ -1,70 +1,64 @@
-<p align="center">
-  <a href="https://www.medusajs.com">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://user-images.githubusercontent.com/59018053/229103275-b5e482bb-4601-46e6-8142-244f531cebdb.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://user-images.githubusercontent.com/59018053/229103726-e5b529a3-9b3f-4970-8a1f-c6af37f087bf.svg">
-    <img alt="Medusa logo" src="https://user-images.githubusercontent.com/59018053/229103726-e5b529a3-9b3f-4970-8a1f-c6af37f087bf.svg">
-    </picture>
-  </a>
-</p>
-<h1 align="center">
-  Medusa
-</h1>
+# Project 
 
-<h4 align="center">
-  <a href="https://docs.medusajs.com">Documentation</a> |
-  <a href="https://www.medusajs.com">Website</a>
-</h4>
+(https://github.com/chiraggarg357/medusa-task-day2/new/master)
 
-<p align="center">
-  Building blocks for digital commerce
-</p>
-<p align="center">
-  <a href="https://github.com/medusajs/medusa/blob/master/CONTRIBUTING.md">
-    <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat" alt="PRs welcome!" />
-  </a>
-    <a href="https://www.producthunt.com/posts/medusa"><img src="https://img.shields.io/badge/Product%20Hunt-%231%20Product%20of%20the%20Day-%23DA552E" alt="Product Hunt"></a>
-  <a href="https://discord.gg/xpCwq3Kfn8">
-    <img src="https://img.shields.io/badge/chat-on%20discord-7289DA.svg" alt="Discord Chat" />
-  </a>
-  <a href="https://twitter.com/intent/follow?screen_name=medusajs">
-    <img src="https://img.shields.io/twitter/follow/medusajs.svg?label=Follow%20@medusajs" alt="Follow @medusajs" />
-  </a>
-</p>
+# Installing Medusa CLI and Setting Up a New Medusa Store
 
-## Compatibility
+ON WSL(windows subsystem for linux)
+## Step 1: check Node.js Installation
 
-This starter is compatible with versions >= 1.8.0 of `@medusajs/medusa`. 
+To check if Node.js is installed on your system, use the following command:
 
-## Getting Started
 
-Visit the [Quickstart Guide](https://docs.medusajs.com/create-medusa-app) to set up a server.
+node -v
 
-Visit the [Docs](https://docs.medusajs.com/development/backend/prepare-environment) to learn more about our system requirements.
+## Step 2: Install Yarn
+Medusa uses Yarn as its package manager. If you don’t have Yarn installed,install it using npm
 
-## What is Medusa
+npm install -g yarn
 
-Medusa is a set of commerce modules and tools that allow you to build rich, reliable, and performant commerce applications without reinventing core commerce logic. The modules can be customized and used to build advanced ecommerce stores, marketplaces, or any product that needs foundational commerce primitives. All modules are open-source and freely available on npm.
+checking Yarn's version:
 
-Learn more about [Medusa’s architecture](https://docs.medusajs.com/development/fundamentals/architecture-overview) and [commerce modules](https://docs.medusajs.com/modules/overview) in the Docs.
+yarn -v
 
-## Roadmap, Upgrades & Plugins
+## Step 3: Install Medusa CLI Globally
+install Medusa CLI globally using Yarn:
 
-You can view the planned, started and completed features in the [Roadmap discussion](https://github.com/medusajs/medusa/discussions/categories/roadmap).
+yarn global add @medusajs/medusa-cli
 
-Follow the [Upgrade Guides](https://docs.medusajs.com/upgrade-guides/) to keep your Medusa project up-to-date.
 
-Check out all [available Medusa plugins](https://medusajs.com/plugins/).
+This command installs Medusa CLI globally on your system, making it accessible from any directory.
 
-## Community & Contributions
+##  Step 4: Verify Medusa CLI Installation
+check its version:
+medusa --version
 
-The community and core team are available in [GitHub Discussions](https://github.com/medusajs/medusa/discussions), where you can ask for support, discuss roadmap, and share ideas.
+## Step 5: Create a New Medusa Store
+Now that Medusa CLI is installed, you can create a new Medusa store project:
 
-Join our [Discord server](https://discord.com/invite/medusajs) to meet other community members.
+medusa new my-medusa-store
 
-## Other channels
 
-- [GitHub Issues](https://github.com/medusajs/medusa/issues)
-- [Twitter](https://twitter.com/medusajs)
-- [LinkedIn](https://www.linkedin.com/company/medusajs)
-- [Medusa Blog](https://medusajs.com/blog/)
+
+## Step 6: Install Project Dependencies
+Medusa will automatically install all required dependencies for your project.
+
+npm audit fix
+
+This will fix non-breaking vulnerabilities.
+
+
+npm audit fix --force
+
+## Step 7: Set Up the Database
+Medusa will prompt you to set up a PostgreSQL database with credentials.
+
+
+## Step 8: Start the Medusa Project
+After the database setup is complete, you can navigate to your project directory and start the development server
+
+cd my-medusa-store
+medusa develop
+
+
+This command starts your Medusa store.
