@@ -1,6 +1,6 @@
 # Project 
 
-(https://github.com/chiraggarg357/medusa-task-day2/new/master)
+https://github.com/chiraggarg357/medusa-task-day2.git
 
 # Installing Medusa CLI and Setting Up a New Medusa Store
 
